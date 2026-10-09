@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option Decider</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app-container">
+    <div id="bubble-container"></div>
+    <div class="card">
+
+      <!-- STEP 1: INPUT CHOICES -->
+      <div id="step-1" class="step-view">
+        <span class="eyebrow">Option Decider</span>
+        <h1>What are you choosing between?</h1>
+        <p class="subtitle">Type up to six options, press Enter after each one.</p>
+        <div class="input-wrapper">
+          <input type="text" id="option-input" placeholder="Type an option and hit Enter…" maxlength="45">
+        </div>
+        <p class="input-hint">0 / 6 added</p>
+        <button id="start-btn" type="button" class="btn-primary hidden">Generate Scene →</button>
+      </div>
+
+      <!-- STEP 2: SCENARIO CLOUD + REACTION -->
+      <div id="step-2" class="step-view hidden">
+        <div class="cloud-wrapper">
+          <div class="cloud-shape">
+            <span class="badge">The Scenario</span>
+            <p id="scenario-text">Generating a scenario…</p>
+          </div>
+        </div>
+        <div class="reaction-box">
+          <label for="user-response">How would you feel, and what would you actually do?</label>
+          <div class="cloud-shape cloud-input">
+            <textarea id="user-response" placeholder="Type your honest, immediate reaction…"></textarea>
+          </div>
+          <button id="submit-btn" type="button" class="btn-primary">Reveal Winning Option →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3: RESULT -->
+      <div id="step-3" class="step-view hidden">
+        <span class="badge-subtle">Your option is</span>
+        <h1 id="result-title">—</h1>
+        <hr class="divider">
+        <div class="result-body">
+          <p id="result-summary">Explanation here…</p>
+        </div>
+        <button id="restart-btn" type="button" class="btn-secondary">Start Over</button>
+      </div>
+
+    </div>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
